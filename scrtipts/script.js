@@ -12,7 +12,7 @@ const personalMovieDB = {
 for (let i = 0; i < 2; i++) {
     let lastFilms = prompt("Один из последних просмотренных фильмов?",""),
     ratioFilms = prompt("На сколько оцените его?", "");
-    if (lastFilms == "" || lastFilms == null || ratioFilms == "" || ratioFilms == null) {
+    if (lastFilms == "" || lastFilms == null || ratioFilms == "" || ratioFilms == null || lastFilms.length > 50) {
         i--;
         alert ("Вы ввели некоррекиные данные");
     } else {personalMovieDB.movies[lastFilms] = ratioFilms;}
