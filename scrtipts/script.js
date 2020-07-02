@@ -38,8 +38,8 @@ function rememberMyFilms() {
     }
 }
 
-function showMyDB() {
-    if (personalMovieDB.privat == false) {
+function showMyDB(hidden) {
+    if (!hidden) {
         console.log(personalMovieDB);
     }
 }
@@ -61,4 +61,4 @@ start();
 rememberMyFilms();
 detectPersonalLevel();
 writeYourGenres();
-showMyDB();
+showMyDB(personalMovieDB.privat);
